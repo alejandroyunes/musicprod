@@ -97,17 +97,19 @@ const s = stylex.create({
     animationTimingFunction: 'ease-in-out',
   },
   container: {
-    maxWidth: $.maxWidth,
+    // maxWidth: $.maxWidth,
     padding: `0 ${spacing.md}`,
     margin: `0 auto`
   },
   desktopNav: {
+    zIndex: 300,
     display: {
       default: "block",
       "@media (max-width: 900px)": "none"
     },
   },
   mobileNav: {
+    zIndex: 103,
     display: {
       default: "none",
       "@media (max-width: 900px)": "block"

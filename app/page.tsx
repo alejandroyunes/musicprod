@@ -12,12 +12,12 @@ export default function Home() {
   return (
     <>
       <Billboard />
-      <WidgetAbout />
+      {/* <WidgetAbout />
       <WidgetCeo />
       <WidgetService />
       <WidgetPartner />
       <WidgetBlog />
-      <WidgetGetInTouch />
+      <WidgetGetInTouch /> */}
     </>
   )
 }
