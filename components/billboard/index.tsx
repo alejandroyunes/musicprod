@@ -14,7 +14,7 @@ export default function Billboard() {
           <h1>Music Production</h1>
         </div>
         <div {...stylex.props(s.slogan)}>
-          <h2>Discover world class composers.</h2>
+          <h2>Discover <span {...stylex.props(s.spamLight)}>world</span> <span {...stylex.props(s.span)}>class composers</span></h2>
           <div {...stylex.props(s.arrow)}>
             <ArrowDouble />
           </div>
@@ -70,6 +70,7 @@ const s = stylex.create({
     animationName: slideIn,
     animationDuration: "1s",
     animationFillMode: "backwards",
+    opacity: .4
   },
   slogan: {
     display: 'flex',
@@ -86,6 +87,12 @@ const s = stylex.create({
     animationName: slideIn,
     animationDuration: "1s",
     animationFillMode: "backwards",
+  },
+  span: {
+    color: colors.white
+  },
+  spamLight: {
+    fontWeight: 'lighter'
   },
   arrow: {
     animationName: pointingDown,

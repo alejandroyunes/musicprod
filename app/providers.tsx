@@ -52,9 +52,6 @@ export const ThemeProvider = ({ children }: Props) => {
             <div {...stylex.props(s.desktopNav)}>
               <DesktopNav />
             </div>
-            <div {...stylex.props(s.mobileNav)}>
-              <MobileNav />
-            </div>
             {children}
             <WidgetFooter />
           </div>
@@ -103,10 +100,7 @@ const s = stylex.create({
   },
   desktopNav: {
     zIndex: 300,
-    display: {
-      default: "block",
-      "@media (max-width: 900px)": "none"
-    },
+    display: 'block',
   },
   mobileNav: {
     zIndex: 103,

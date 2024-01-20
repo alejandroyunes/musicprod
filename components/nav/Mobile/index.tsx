@@ -17,9 +17,6 @@ export function MobileNav() {
             <p {...stylex.props(s.capital)}>Capita<span {...stylex.props(s.invest)}>||nvest</span></p>
           </Link>
         </div>
-        <div {...stylex.props(s.right)}>
-          <ModePicker />
-        </div>
       </div>
     </nav >
   )

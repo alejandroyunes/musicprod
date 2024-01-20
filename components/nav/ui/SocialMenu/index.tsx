@@ -11,6 +11,12 @@ import Facebook from "@/components/Assets/Icons/Facebook"
 import Twitter from "@/components/Assets/Icons/Twitter"
 import Instagram from "@/components/Assets/Icons/Instagram"
 import Youtube from "@/components/Assets/Icons/Youtube"
+import HamburgerSvg from "@/components/Assets/Icons/HamburgerSvg"
+import HorizontalHamburger from "@/components/Assets/Icons/HorizontalHamburger"
+import Link from "next/link"
+import FacebookCircle from "@/components/Assets/Icons/FacebookCircle"
+import InstagramCircle from "@/components/Assets/Icons/InstagramCircle"
+import TwitterCircle from "@/components/Assets/Icons/TwitterCircle"
 
 export default function Social() {
   const [open, setOpen] = useState<boolean | undefined>()
@@ -26,12 +32,12 @@ export default function Social() {
   return (
     <>
       <div {...stylex.props(s.hamburgerMenu)} onClick={() => setOpen(!open)}>
-        <VerticalHamburger />
+        <HorizontalHamburger />
       </div>
 
       <div {...stylex.props(s.container, open && s.slideIn, open === false && s.slideOut)}>
         <div   {...stylex.props(s.header)}>
-          <p {...stylex.props(s.capital)}>Capita<span {...stylex.props(s.invest)}>||nvest</span></p>
+          <p {...stylex.props(s.capital)}>Music Logo</p>
 
           <div {...stylex.props(s.animationExit)} onClick={handleClose}>
             <ExitSvg />
@@ -41,45 +47,62 @@ export default function Social() {
         <div {...stylex.props(s.content)}>
 
           <ul {...stylex.props(s.body)}>
-            <li {...stylex.props(s.items)}>
-              <span {...stylex.props(s.svg)}>
-                <Facebook />
-              </span>
-              <p {...stylex.props(s.paragrah)}>
-                Facebook
-              </p>
-            </li>
-            <li {...stylex.props(s.items)}>
-              <span {...stylex.props(s.svg)}>
-                <Instagram />
-              </span>
-              <p {...stylex.props(s.paragrah)}>
-                Instagram
-              </p>
-            </li>
-            <li {...stylex.props(s.items)}>
-              <span {...stylex.props(s.svg)}>
-                <Twitter />
-              </span>
-              <p {...stylex.props(s.paragrah)}>
-                Twitter
-              </p>
-            </li>
-            <li {...stylex.props(s.items)}>
-              <span {...stylex.props(s.svg)}>
-                <Youtube />
-              </span>
-              <p {...stylex.props(s.paragrah)}>
-                Youtube
-              </p>
-            </li>
+            <Link href="/" {...stylex.props(s.link)} onClick={handleClose}>
+              <li {...stylex.props(s.items)}>
+                <p {...stylex.props(s.paragraph)}>
+                  Home
+                </p>
+              </li>
+            </Link>
+
+            <Link href="/about" {...stylex.props(s.link)} onClick={handleClose}>
+              <li {...stylex.props(s.items)}>
+                <p {...stylex.props(s.paragraph)}>
+                  About
+                </p>
+              </li>
+            </Link>
+            <Link href="/news" {...stylex.props(s.link)} onClick={handleClose}>
+
+              <li {...stylex.props(s.items)}>
+                <p {...stylex.props(s.paragraph)}>
+                  News
+                </p>
+              </li>
+            </Link>
+
+            <Link href="/blog" {...stylex.props(s.link)} onClick={handleClose}>
+
+              <li {...stylex.props(s.items)}>
+                <p {...stylex.props(s.paragraph)}>
+                  Blog
+                </p>
+              </li>
+            </Link>
+
+            <Link href="/contact" {...stylex.props(s.link)} onClick={handleClose}>
+              <li {...stylex.props(s.items)}>
+                <p {...stylex.props(s.paragraph)}>
+                  Contact
+                </p>
+              </li>
+            </Link>
+
           </ul>
 
           <div {...stylex.props(s.contact)}>
-            <p {...stylex.props(s.contactTel)}>+1 800 555 44 88</p>
-            <p {...stylex.props(s.contactEmail)}>info@email.com</p>
+            <div {...stylex.props(s.social)}>
+              <span {...stylex.props(s.svg)}>
+                <FacebookCircle />
+              </span>
+              <span {...stylex.props(s.svg)}>
+                <InstagramCircle />
+              </span>
+              <span {...stylex.props(s.svg)}>
+                <TwitterCircle />
+              </span>
+            </div>
           </div>
-
         </div>
 
       </div>
@@ -91,12 +114,13 @@ export default function Social() {
 
 const slideIn = stylex.keyframes({
   '0%': { transform: 'translateX(0%)' },
-  '100%': { transform: 'translateX(-100%)' },
+  '100%': { transform: 'translateX(100%)' },
+
 })
 
 const slideOut = stylex.keyframes({
-  '0%': { transform: 'translateX(-100%)' },
-  '100%': { transform: 'translateX(0%)' },
+  '0%': { transform: 'translateX(100%)' },
+  '100%': { transform: 'translateX(-100%)' },
 })
 
 const fadeIn = stylex.keyframes({
@@ -115,14 +139,8 @@ const s = stylex.create({
   container: {
     position: "fixed",
     top: 0,
-    right: {
-      default: "-30vw",
-      "@media (max-width: 900px)": "-80vw"
-    },
-    width: {
-      default: "30vw",
-      "@media (max-width: 900px)": "80vw"
-    },
+    left: '-100vw',
+    width: "100vw",
     display: 'flex',
     flexDirection: 'column',
     height: "100%",
@@ -141,18 +159,32 @@ const s = stylex.create({
   slideOut: {
     animationName: slideOut,
     animationDuration: "0.5s",
-    animationFillMode: "forwards",
+    animationFillMode: "backwards",
     zIndex: 101
   },
   header: {
     display: 'flex',
     paddingLeft: {
       default: spacing.xxl,
-      '@media (max-width: 1024px)': spacing.xl,
+      '@media (max-width: 1024px)': spacing.md,
     },
   },
   logo: {
     marginTop: spacing.lg
+  },
+  link: {
+    textDecoration: 'none',
+    color: 'inherit'
+  },
+  paragraph: {
+    fontSize: text.h5,
+  },
+  social: {
+    display: 'flex',
+    paddingLeft: {
+      default: spacing.xl,
+      '@media (max-width: 500px)': spacing.md
+    }
   },
   capital: {
     fontSize: text.h3,
@@ -188,13 +220,13 @@ const s = stylex.create({
     listStyleType: 'none',
     paddingLeft: {
       default: spacing.xxl,
-      '@media (max-width: 1024px)': spacing.xl,
+      '@media (max-width: 1024px)': spacing.md,
     }
   },
   items: {
     display: 'flex',
     alignItems: 'center',
-    marginBottom: spacing.xxs,
+    marginBottom: spacing.xs,
   },
   svg: {
     backgroundColor: {

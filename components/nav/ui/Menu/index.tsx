@@ -3,6 +3,10 @@
 import stylex from '@stylexjs/stylex'
 import { globalTokens as $, colors, spacing, text } from './../../../../app/globalTokens.stylex'
 import Link from 'next/link'
+import Facebook from '@/components/Assets/Icons/Facebook'
+import FacebookCircle from '@/components/Assets/Icons/FacebookCircle'
+import TwitterCircle from '@/components/Assets/Icons/TwitterCircle'
+import InstagramCircle from '@/components/Assets/Icons/InstagramCircle'
 
 export default function Menu() {
 
@@ -11,30 +15,19 @@ export default function Menu() {
       <ul {...stylex.props(s.list)}>
         <Link href="/" {...stylex.props(s.link)}>
           <li {...stylex.props(s.item)}>
-            <span {...stylex.props(s.span)}>Home</span>
+            <span {...stylex.props(s.span)}><FacebookCircle /></span>
           </li>
         </Link>
-        <Link href="/about" {...stylex.props(s.link)}>
+        <Link href="/" {...stylex.props(s.link)}>
           <li {...stylex.props(s.item)}>
-            <span {...stylex.props(s.span)}>About</span>
+            <span {...stylex.props(s.span)}><TwitterCircle /></span>
           </li>
         </Link>
-        <Link href="/news" {...stylex.props(s.link)}>
+        <Link href="/" {...stylex.props(s.link)}>
           <li {...stylex.props(s.item)}>
-            <span {...stylex.props(s.span)}>News</span>
+            <span {...stylex.props(s.span)}><InstagramCircle /></span>
           </li>
         </Link>
-        <Link href="/blog" {...stylex.props(s.link)}>
-          <li {...stylex.props(s.item)}>
-            <span {...stylex.props(s.span)}>Blog</span>
-          </li>
-        </Link>
-        <Link href="/contact" {...stylex.props(s.link)}>
-          <li {...stylex.props(s.item)}>
-            <span {...stylex.props(s.span)}>Contact</span>
-          </li>
-        </Link>
-
       </ul>
     </div >
   )
@@ -60,20 +53,5 @@ const s = stylex.create({
   span: {
     zIndex: 200,
     cursor: 'pointer',
-    fontSize: text.p,
-    color: colors.inverted,
-    backgroundImage: colors.navUnderline,
-    paddingBottom: spacing.xxxs,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: {
-      default: '0 100%',
-      ':hover': '100% 100%',
-    },
-    backgroundSize: {
-      default: '0% 2px',
-      ':hover': '100% 2px',
-    },
-    // eslint-disable-next-line @stylexjs/valid-styles
-    transition: 'background-size 0.3s, background-position 0s 0.3s',
   },
 })
