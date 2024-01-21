@@ -55,14 +55,14 @@ export default function Social() {
               </li>
             </Link>
 
-            <Link href="/about" {...stylex.props(s.link)} onClick={handleClose}>
+            <Link href="/" {...stylex.props(s.link)} onClick={handleClose}>
               <li {...stylex.props(s.items)}>
                 <p {...stylex.props(s.paragraph)}>
                   About
                 </p>
               </li>
             </Link>
-            <Link href="/news" {...stylex.props(s.link)} onClick={handleClose}>
+            <Link href="/" {...stylex.props(s.link)} onClick={handleClose}>
 
               <li {...stylex.props(s.items)}>
                 <p {...stylex.props(s.paragraph)}>
@@ -71,7 +71,7 @@ export default function Social() {
               </li>
             </Link>
 
-            <Link href="/blog" {...stylex.props(s.link)} onClick={handleClose}>
+            <Link href="/" {...stylex.props(s.link)} onClick={handleClose}>
 
               <li {...stylex.props(s.items)}>
                 <p {...stylex.props(s.paragraph)}>
@@ -80,7 +80,7 @@ export default function Social() {
               </li>
             </Link>
 
-            <Link href="/contact" {...stylex.props(s.link)} onClick={handleClose}>
+            <Link href="/" {...stylex.props(s.link)} onClick={handleClose}>
               <li {...stylex.props(s.items)}>
                 <p {...stylex.props(s.paragraph)}>
                   Contact
