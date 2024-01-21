@@ -1,11 +1,7 @@
 "use client"
 import * as stylex from "@stylexjs/stylex"
-import Image from "next/image"
-import logo from '../../Assets/images/logo.webp'
-
 
 import { colors, spacing, text } from "../../../app/globalTokens.stylex"
-import ModePicker from "../ui/ModePicker"
 import Menu from "../ui/Menu"
 import Social from "../ui/SocialMenu"
 import Link from "next/link"

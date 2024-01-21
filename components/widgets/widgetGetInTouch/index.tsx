@@ -69,7 +69,8 @@ const s = stylex.create({
   },
   right: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    order: -1
   },
   rightRow: {
     display: 'flex',
@@ -79,7 +80,7 @@ const s = stylex.create({
   locationBg: {
     width: 40,
     height: 40,
-    backgroundColor: colors.primary,
+    backgroundColor: 'transparent',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',

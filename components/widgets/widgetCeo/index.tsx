@@ -22,7 +22,7 @@ export default function WidgetCeo() {
           </div>
           <div>
             <p {...stylex.props(s.name)}>Roger Waters</p>
-            <p>Ceo</p>
+            <p>Director</p>
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@ const s = stylex.create({
       '@media (max-width: 900px)': 'repeat(1, 1fr)'
     },
     gap: spacing.xs,
-    margin: `${spacing.xxxl} auto`,
+    margin: `${spacing.xl} auto ${spacing.xxxl}`,
   },
   left: {
     display: 'flex',

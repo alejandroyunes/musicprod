@@ -193,6 +193,7 @@ export const colors = stylex.defineVars({
   white: '#edebeb',
   gray: '#656565',
   lightGray: '#d3d3d3',
+  darkGray: '#252525',
   xBorderColor: "rgba(108, 108, 108, 0.3)",
   bg: {
     default: "red",

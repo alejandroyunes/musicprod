@@ -183,7 +183,7 @@ const s = stylex.create({
     display: 'flex',
     paddingLeft: {
       default: spacing.xl,
-      '@media (max-width: 500px)': spacing.md
+      '@media (max-width: 1024px)': spacing.md,
     }
   },
   capital: {

@@ -70,7 +70,7 @@ const s = stylex.create({
     animationName: slideIn,
     animationDuration: "1s",
     animationFillMode: "backwards",
-    opacity: .4
+    opacity: .5
   },
   slogan: {
     display: 'flex',
@@ -100,7 +100,7 @@ const s = stylex.create({
     animationFillMode: 'both',
     animationTimingFunction: 'ease-in-out',
     animationIterationCount: 'infinite',
-    paddingTop: spacing.sm
+    paddingTop: spacing.xl
   },
   image: {
     objectFit: 'cover',

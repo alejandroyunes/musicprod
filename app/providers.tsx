@@ -5,8 +5,6 @@ import { globalTokens as $, colors } from "./globalTokens.stylex"
 
 import { darkTheme, lightTheme } from './themes'
 import { DesktopNav } from "../components/nav/DesktopNav"
-import { MobileNav } from "../components/nav/Mobile"
-
 
 import React, {
   ReactNode,

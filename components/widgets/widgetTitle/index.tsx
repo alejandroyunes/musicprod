@@ -5,10 +5,11 @@ import Arrow from "@/components/Assets/Icons/Arrow"
 import ArrowDownSvg from "@/components/Assets/Icons/ArrowDownSvg";
 
 interface WidgetTitleProps {
-  title: string;
+  title: string
+  subtitle: string
 }
 
-export default function WidgetTitle({ title }: WidgetTitleProps) {
+export default function WidgetTitle({ title, subtitle }: WidgetTitleProps) {
 
   return (
     <section>
@@ -17,21 +18,17 @@ export default function WidgetTitle({ title }: WidgetTitleProps) {
           <p>{title}</p>
         </div>
 
-        <div {...stylex.props(s.arrow)}>
-          <ArrowDownSvg />
+        <div {...stylex.props(s.subtitle)}>
+          <p>{subtitle}</p>
         </div>
 
       </div>
+
 
     </section>
   )
 }
 
-const pointingDown = stylex.keyframes({
-  '0%': { transform: 'translateY(0px)' },
-  '50%': { transform: 'translateY(15px)' },
-  '100%': { transform: 'translateY(0px)' },
-})
 
 const s = stylex.create({
   container: {
@@ -42,7 +39,7 @@ const s = stylex.create({
     },
     gap: spacing.md,
     margin: {
-      default: `${spacing.xxxl} auto 0`,
+      default: `${spacing.xl} auto 0`,
       '@media (max-width: 900px)': `${spacing.xl} auto 0`
     },
     justifyContent: 'center'
@@ -50,13 +47,9 @@ const s = stylex.create({
   top: {
     fontSize: text.h2
   },
-  arrow: {
+  subtitle: {
     display: 'flex',
     justifyContent: 'center',
-    animationName: pointingDown,
-    animationDuration: "2s",
-    animationFillMode: 'both',
-    animationTimingFunction: 'ease-in-out',
-    animationIterationCount: 'infinite',
+    fontWeight: 300,
   }
 })
