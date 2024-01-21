@@ -39,7 +39,11 @@ const s = stylex.create({
       '@media (max-width: 900px)': 'repeat(1, 1fr)'
     },
     gap: spacing.md,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    // paddingTop: {
+    //   default: spacing.xxl,
+    //   '@media (max-width: 900px)': null
+    // }
   },
   top: {
     fontSize: text.h2

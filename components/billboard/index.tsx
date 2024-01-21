@@ -53,7 +53,8 @@ const s = stylex.create({
     gridTemplateColumns: '1fr',
     margin: "0 auto",
     height: '90vh',
-    alignContent: 'center'
+    alignContent: 'center',
+    marginBottom: spacing.xxl
   },
   title: {
     display: 'flex',
