@@ -88,6 +88,7 @@ const s = stylex.create({
   },
   position: {
     position: 'relative',
+    cursor: 'pointer',
     animationName: {
       default: null,
       ':hover': fadeIn
