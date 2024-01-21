@@ -52,7 +52,7 @@ const s = stylex.create({
     display: "grid",
     gridTemplateColumns: '1fr',
     margin: "0 auto",
-    height: '100vh',
+    height: '90vh',
     alignContent: 'center'
   },
   title: {
