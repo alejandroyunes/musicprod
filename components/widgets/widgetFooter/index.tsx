@@ -1,10 +1,7 @@
 'use client'
 import * as stylex from "@stylexjs/stylex"
 import { colors, spacing, text } from "../../../app/globalTokens.stylex"
-import Image from "next/image"
-import logo from '../../components/Assets/images/logo.webp'
-import map from './assets/mapsGermanyjpb.jpg'
-import Link from "next/link"
+
 export default function WidgetFooter() {
   const handleClick = () => {
     console.log("click")
@@ -23,6 +20,7 @@ export default function WidgetFooter() {
 
 const s = stylex.create({
   footer: {
+    marginTop: spacing.xl,
     borderTopWidth: "1px",
     borderTopStyle: "solid",
     borderTopColor: colors.xBorderColor,

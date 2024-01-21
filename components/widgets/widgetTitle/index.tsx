@@ -6,10 +6,11 @@ import ArrowDownSvg from "@/components/Assets/Icons/ArrowDownSvg";
 
 interface WidgetTitleProps {
   title: string
-  subtitle: string
+  subtitle: string,
+  spaceTop?: boolean
 }
 
-export default function WidgetTitle({ title, subtitle }: WidgetTitleProps) {
+export default function WidgetTitle({ title, subtitle, spaceTop }: WidgetTitleProps) {
 
   return (
     <section>
@@ -38,10 +39,6 @@ const s = stylex.create({
       '@media (max-width: 900px)': 'repeat(1, 1fr)'
     },
     gap: spacing.md,
-    margin: {
-      default: `${spacing.xl} auto 0`,
-      '@media (max-width: 900px)': `${spacing.xl} auto 0`
-    },
     justifyContent: 'center'
   },
   top: {

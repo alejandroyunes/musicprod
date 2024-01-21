@@ -69,6 +69,7 @@ const s = stylex.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    cursor: 'pointer',
     opacity: {
       default: null,
       ':hover': .4
@@ -81,6 +82,7 @@ const s = stylex.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    cursor: 'pointer',
     opacity: {
       default: null,
       ':hover': .4
