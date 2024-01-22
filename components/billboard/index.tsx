@@ -54,7 +54,7 @@ const s = stylex.create({
     margin: "0 auto",
     height: '90vh',
     alignContent: 'center',
-    marginBottom: spacing.xxl
+    marginBottom: spacing.xl
   },
   title: {
     display: 'flex',
@@ -88,6 +88,7 @@ const s = stylex.create({
     animationName: slideIn,
     animationDuration: "1s",
     animationFillMode: "backwards",
+    marginTop: spacing.xl
   },
   span: {
     color: colors.white
@@ -101,7 +102,7 @@ const s = stylex.create({
     animationFillMode: 'both',
     animationTimingFunction: 'ease-in-out',
     animationIterationCount: 'infinite',
-    paddingTop: spacing.xl
+    marginTop: spacing.md
   },
   image: {
     objectFit: 'cover',
