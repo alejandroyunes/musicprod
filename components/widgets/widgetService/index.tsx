@@ -1,4 +1,3 @@
-'use client'
 import * as stylex from "@stylexjs/stylex"
 import { colors, globalTokens, spacing, text } from "../../../app/globalTokens.stylex"
 import service1 from './assets/service1.webp'
@@ -145,5 +144,4 @@ const s = stylex.create({
     fontSize: text.h4,
     color: colors.white
   },
-
 })

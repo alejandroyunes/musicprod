@@ -6,7 +6,6 @@ import { useState } from "react"
 import ExitSvg from "../../../Assets/Icons/ExitSvg"
 import VerticalHamburger from "@/components/Assets/Icons/VerticalHamburger"
 import Image from "next/image"
-import logo from '../../../Assets/images/logo.webp'
 import Facebook from "@/components/Assets/Icons/Facebook"
 import Twitter from "@/components/Assets/Icons/Twitter"
 import Instagram from "@/components/Assets/Icons/Instagram"
@@ -16,6 +15,7 @@ import HorizontalHamburger from "@/components/Assets/Icons/HorizontalHamburger"
 import Link from "next/link"
 import FacebookCircle from "@/components/Assets/Icons/FacebookCircle"
 import InstagramCircle from "@/components/Assets/Icons/InstagramCircle"
+import logo from '../../../../components/Assets/images/logo-mps.png'
 import TwitterCircle from "@/components/Assets/Icons/TwitterCircle"
 
 export default function Social() {
@@ -37,7 +37,15 @@ export default function Social() {
 
       <div {...stylex.props(s.container, open && s.slideIn, open === false && s.slideOut)}>
         <div   {...stylex.props(s.header)}>
-          <p {...stylex.props(s.capital)}>Music Logo</p>
+          <Link href="/" {...stylex.props(s.link)}>
+            <Image
+              {...stylex.props(s.logo)}
+              src={logo}
+              width={0}
+              height={0}
+              alt="logo mps"
+            />
+          </Link>
 
           <div {...stylex.props(s.animationExit)} onClick={handleClose}>
             <ExitSvg />
@@ -62,23 +70,7 @@ export default function Social() {
                 </p>
               </li>
             </Link>
-            <Link href="/" {...stylex.props(s.link)} onClick={handleClose}>
 
-              <li {...stylex.props(s.items)}>
-                <p {...stylex.props(s.paragraph)}>
-                  News
-                </p>
-              </li>
-            </Link>
-
-            <Link href="/" {...stylex.props(s.link)} onClick={handleClose}>
-
-              <li {...stylex.props(s.items)}>
-                <p {...stylex.props(s.paragraph)}>
-                  Blog
-                </p>
-              </li>
-            </Link>
 
             <Link href="/" {...stylex.props(s.link)} onClick={handleClose}>
               <li {...stylex.props(s.items)}>
@@ -170,7 +162,7 @@ const s = stylex.create({
     },
   },
   logo: {
-    marginTop: spacing.lg
+    marginTop: spacing.lg,
   },
   link: {
     textDecoration: 'none',

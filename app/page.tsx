@@ -9,6 +9,7 @@ import WidgetFooter from '@/components/widgets/widgetFooter'
 import WidgetTitle from "@/components/widgets/widgetTitle"
 import WidgetEvents from "@/components/widgets/widgetEvents"
 import WidgetMusic from "@/components/widgets/widgetMusic"
+import WidgetImageGrid from "@/components/widgets/widgetImageGrid"
 
 export default function Home() {
 
@@ -24,6 +25,8 @@ export default function Home() {
 
       <WidgetTitle title="Upcoming Events" subtitle="Tour Dates 2024" />
       <WidgetEvents />
+
+      <WidgetImageGrid />
 
       <WidgetMusic />
 
