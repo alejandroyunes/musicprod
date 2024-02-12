@@ -2,7 +2,7 @@ import "./globals.css"
 import { ThemeProvider } from "./providers"
 
 export const metadata = {
-  title: "Music Production",
+  title: "MPS Elevate Your Sound",
   description: "Music",
 }
 

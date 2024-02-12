@@ -1,6 +1,6 @@
 'use client'
 import * as stylex from "@stylexjs/stylex"
-import { colors, spacing, text } from "../../../app/globalTokens.stylex"
+import { colors, globalTokens, spacing, text } from "../../../app/globalTokens.stylex"
 import service1 from './assets/service1.webp'
 import service2 from './assets/service2.webp'
 import service3 from './assets/service3.webp'
@@ -22,11 +22,13 @@ export default function WidgetService() {
             width={0}
             height={0}
           />
-          <div {...stylex.props(s.bg)}>
-          </div>
-          <div {...stylex.props(s.text)}>
-            <p {...stylex.props(s.textContainer)}>Doing Business</p>
-            <p>Lorem, ipsum dolor.</p>
+          <div {...stylex.props(s.textBg)}>
+            <div {...stylex.props(s.text)}>
+              <p {...stylex.props(s.textContainer)}>Harmonic Expertise</p>
+              {/* <p>Lorem, ipsum dolor.</p> */}
+            </div>
+            <div {...stylex.props(s.bg)}>
+            </div>
           </div>
         </div>
 
@@ -38,11 +40,14 @@ export default function WidgetService() {
             width={0}
             height={0}
           />
-          <div {...stylex.props(s.bg)}>
-          </div>
-          <div {...stylex.props(s.text)}>
-            <p {...stylex.props(s.textContainer)}>Increasing Efficiency</p>
-            <p>Lorem ipsum dolor sit.</p>
+          <div {...stylex.props(s.textBg)}>
+
+            <div {...stylex.props(s.bg)}>
+            </div>
+            <div {...stylex.props(s.text)}>
+              <p {...stylex.props(s.textContainer)}>Innovation in Audio</p>
+              {/* <p>Lorem ipsum dolor sit.</p> */}
+            </div>
           </div>
         </div>
 
@@ -54,13 +59,17 @@ export default function WidgetService() {
             width={0}
             height={0}
           />
-          <div {...stylex.props(s.bg)}>
-          </div>
-          <div {...stylex.props(s.text)}>
-            <p {...stylex.props(s.textContainer)}>Control</p>
-            <p>Lorem, ipsum dolor.</p>
+          <div {...stylex.props(s.textBg)}>
+
+            <div {...stylex.props(s.bg)}>
+            </div>
+            <div {...stylex.props(s.text)}>
+              <p {...stylex.props(s.textContainer)}>Live Vibe Creation</p>
+              {/* <p>Lorem, ipsum dolor.</p> */}
+            </div>
           </div>
         </div>
+
       </div>
     </section>
   )
@@ -85,10 +94,9 @@ const s = stylex.create({
       default: `${spacing.xxl} auto`,
       '@media (max-width: 900px)': `${spacing.xl} auto`
     },
+    maxWidth: globalTokens.maxWidth
   },
   position: {
-    position: 'relative',
-    cursor: 'pointer',
     animationName: {
       default: null,
       ':hover': fadeIn
@@ -98,7 +106,22 @@ const s = stylex.create({
     animationIterationCount: 1,
     animationTimingFunction: 'ease-in-out',
     transformOrigin: 'center center',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    position: 'relative',
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+  },
+  textBg: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    width: '100%',
+    height: '100px',
+    display: 'flex',
+    alignItems: 'center'
   },
   bg: {
     position: 'absolute',
@@ -107,17 +130,11 @@ const s = stylex.create({
     cursor: 'pointer',
     width: '100%',
     height: '100px',
-
     backgroundColor: colors.black,
     opacity: .5,
     zIndex: 100
   },
   text: {
-    position: 'absolute',
-    top: '70%',
-    left: '50%',
-    transform: 'translate(-50%, 0)',
-    cursor: 'pointer',
     whiteSpace: 'nowrap',
     color: colors.white,
     width: '100%',
@@ -128,8 +145,5 @@ const s = stylex.create({
     fontSize: text.h4,
     color: colors.white
   },
-  image: {
-    width: '100%',
-    height: '100%',
-  },
+
 })

@@ -11,7 +11,7 @@ export default function Billboard() {
     <>
       <div  {...stylex.props(s.container)}>
         <div {...stylex.props(s.title)}>
-          <h1>Music Production</h1>
+          <h1>Elevate Your Sound</h1>
         </div>
         <div {...stylex.props(s.slogan)}>
           <h2>Discover <span {...stylex.props(s.spamLight)}>world</span> <span {...stylex.props(s.span)}>class composers</span></h2>

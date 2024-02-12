@@ -1,10 +1,11 @@
 "use client"
 import * as stylex from "@stylexjs/stylex"
-
+import Image from "next/image"
 import { colors, spacing, text } from "../../../app/globalTokens.stylex"
 import Menu from "../ui/Menu"
 import Social from "../ui/SocialMenu"
 import Link from "next/link"
+import logo from '../../../components/Assets/images/logo-mps2.png'
 
 export function DesktopNav() {
 
@@ -17,7 +18,13 @@ export function DesktopNav() {
 
       <div {...stylex.props(s.middle)}>
         <Link href="/" {...stylex.props(s.link)}>
-          <p {...stylex.props(s.capital)}>Music Logo</p>
+          <Image
+            {...stylex.props(s.logo)}
+            src={logo}
+            width={0}
+            height={0}
+            alt="logo mps"
+          />
         </Link>
       </div>
 
@@ -35,6 +42,10 @@ const s = stylex.create({
     alignItems: "center",
     justifyContent: "space-between",
     marginTop: spacing.md
+  },
+  logo: {
+    maxHeight: 69,
+    maxWidth: 76
   },
   link: {
     textDecoration: 'none',

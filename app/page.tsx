@@ -16,10 +16,10 @@ export default function Home() {
     <>
       <Billboard />
 
-      <WidgetTitle title="About Us" subtitle="Our History" />
+      <WidgetTitle title="Great quality for your tracks" subtitle="OUR MUSIC STUDIO" />
       <WidgetCeo />
 
-      <WidgetTitle title="Latest News" subtitle="Blog" />
+      <WidgetTitle title=" Crafting Masterpieces" subtitle="Quality is our heartbeat" />
       <WidgetService />
 
       <WidgetTitle title="Upcoming Events" subtitle="Tour Dates 2024" />
