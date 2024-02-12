@@ -40,10 +40,10 @@ const s = stylex.create({
     },
     gap: spacing.md,
     justifyContent: 'center',
-    // paddingTop: {
-    //   default: spacing.xxl,
-    //   '@media (max-width: 900px)': null
-    // }
+    paddingTop: {
+      default: spacing.xxl,
+      '@media (max-width: 900px)': null
+    }
   },
   top: {
     fontSize: text.h2
