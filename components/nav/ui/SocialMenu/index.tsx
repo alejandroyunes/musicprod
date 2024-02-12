@@ -63,7 +63,7 @@ export default function Social() {
               </li>
             </Link>
 
-            <Link href="/" {...stylex.props(s.link)} onClick={handleClose}>
+            <Link href="/about" {...stylex.props(s.link)} onClick={handleClose}>
               <li {...stylex.props(s.items)}>
                 <p {...stylex.props(s.paragraph)}>
                   About
@@ -72,7 +72,7 @@ export default function Social() {
             </Link>
 
 
-            <Link href="/" {...stylex.props(s.link)} onClick={handleClose}>
+            <Link href="/contact" {...stylex.props(s.link)} onClick={handleClose}>
               <li {...stylex.props(s.items)}>
                 <p {...stylex.props(s.paragraph)}>
                   Contact

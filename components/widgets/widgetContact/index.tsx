@@ -5,6 +5,7 @@ import ClockSvg from "./assets/icons/ClockSvg"
 import LocationSvg from "./assets/icons/LocationSvg"
 import ContactSvg from "./assets/icons/ContactSvg"
 import WidgetImage from "../widgetImage"
+import WidgetImageAbout from "../widgetImageAbout"
 
 export default function WidgetContact() {
 
@@ -37,7 +38,8 @@ export default function WidgetContact() {
 
       </div>
 
-      <WidgetImage title="Your results are our priority" />
+      <WidgetImageAbout title="Your results are our priority" />
+
     </section>
   )
 }
